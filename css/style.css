@@ -1,0 +1,132 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image:url('../imagens/login.jpg');
+}
+
+.game {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 50px solid #fcddbaf5;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; 
+} /* fcddbaf5 */
+
+/* AUDIO */
+audio::-webkit-media-controls-timeline { display:inline-flex;}
+audio::-webkit-media-controls-panel {background-color: #faade7fe;}
+
+
+.music{
+  padding-top: 35px;
+  padding-left: 15px;
+  display: flex;
+  width: 10%;
+}
+
+/* Obstáculos */
+
+.pipe-game {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 2.0s infinite linear;
+}
+
+
+.pipex-game {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 5.0s infinite linear;
+}
+
+.pipes-game {
+  position: absolute;
+  bottom: 150px;
+  width: 70px;
+  animation: pipe-animation 6.0s infinite linear;
+}
+
+.pipez-game {
+  position: absolute;
+  bottom: 180px;
+  width: 70px;
+  animation: pipe-animation 7.3s infinite linear;
+}
+
+.nitro-game {
+  position: absolute;
+  bottom: -25px;
+  width: 145px;
+  animation: pipe-animation 50.0s infinite linear;
+}
+
+.super-mario{
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump-mario {
+  animation: mario-animation 500ms ease-out;
+}
+
+.cloudx-game {
+  position: absolute;
+  width: 250px;
+  animation: clouds-animation 5s infinite linear /*linear*/;
+}
+
+.clouds-game {
+  position: absolute;
+  width: 300px;
+  animation: clouds-animation 3.2s infinite linear;
+}
+
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+  to{
+    right: 100%;
+  }
+}
+
+
+@keyframes clouds-animation {
+  from{
+    right: -550px;
+  }
+  to{
+    right: 100%;
+  }
+}
+
+@keyframes mario-animation {
+  0%{
+    bottom: 200;
+  }
+  40%{
+    bottom: 190px;
+  }
+  50%{
+    bottom: 180px;
+  }
+  60%{
+    bottom: 180px;
+  }
+  70%{
+    bottom: 180px;
+  }
+  100%{
+    bottom: 0%;
+  }
+  
+}
